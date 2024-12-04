@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap; /* Ensures the panels wrap on smaller screens */
+}
+
+.pricing-panel {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px; /* Fixed width for each panel */
+    transition: transform 0.3s ease;
+}
+
+.pricing-panel h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2.5em;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Featured Plan (Pro) - Styling for the highlighted plan */
+.featured {
+    background-color: #fffae5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+}
+
+.featured h2 {
+    color: #ff9800;
+}
+
+/* Hover Effect for Pricing Panels */
+.pricing-panel:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-panel {
+    width: 100%;  /* Full width for each panel on smaller screens */
+    max-width: 400px;  /* Max width */
+  }
+}
